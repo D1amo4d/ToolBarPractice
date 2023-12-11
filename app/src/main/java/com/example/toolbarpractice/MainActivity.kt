@@ -35,5 +35,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        binding.toolBar.setOnCreateContextMenuListener { menu, v, menuItem ->
+            menu.add("Long click").setOnMenuItemClickListener {
+                Toast.makeText(this, "Long clicked on menu item", Toast.LENGTH_LONG).show()
+                true
+            }
+        }
+
     }
 }
